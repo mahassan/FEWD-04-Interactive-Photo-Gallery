@@ -12,9 +12,14 @@ input{
     width:300px;
     margin:10px 0;
 }
+.header{
+    width: 1000px;
+    text-align: center;
+}
 .main{
     max-width: 1000px;
     display: grid;
     grid-template-columns: repeat(auto-fill , 200px);
     grid-gap:25px;
+    text-align: center;
 }
