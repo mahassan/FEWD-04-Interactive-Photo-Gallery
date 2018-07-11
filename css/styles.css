@@ -1,0 +1,20 @@
+#wrapper{
+    justify-content: center;
+    width:1000px;
+    margin:0 auto;
+    background:lightgrey;
+}
+input{
+    padding:15px;
+    margin:0 auto;
+    border:1px solid grey;
+    border-radius: 5px;
+    width:300px;
+    margin:10px 0;
+}
+.main{
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , 200px);
+    grid-gap:25px;
+}
