@@ -3,28 +3,26 @@ $(document).ready(function(){
     const searchBox = $("#search");
     const images = $('.main a img');
     const captions = $(images).parent().parent();
-    
-    // function picCollection(){
-    //     for(let i = 0; i <images.length;i++){
-    //         console.log(images[i].alt);
-    //     }
-    // }
 
     /*
     As project require us to filter real time
     we need to use event that trigger on every
-    keypress
+    keydown
     */
     searchBox.on('keydown', function(){
         //loop over images
             for(let i = 0; i <images.length;i++){
             //if searchbox value is equal/matching
-                if(images[i].alt.includes(searchBox.val()) || captions[i].dataset.title.includes(searchBox.val())){
+                if(images[i].alt.includes(searchBox.val().toLowerCase()) 
+                || images[i].alt.includes(searchBox.val().toUpperCase()) 
+                || captions[i].dataset.title.includes(searchBox.val().toLowerCase())
+                || captions[i].dataset.title.includes(searchBox.val().toUpperCase())){
+                    //then display that images
                     $(images[i]).show();
                 }else{
+                    //else hide 
                     $(images[i]).hide();
                 }
             }
     })
-    console.log();
 })

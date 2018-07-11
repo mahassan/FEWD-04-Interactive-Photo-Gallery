@@ -2,7 +2,6 @@
     justify-content: center;
     width:1000px;
     margin:0 auto;
-    background:lightgrey;
 }
 input{
     padding:15px;
@@ -11,6 +10,10 @@ input{
     border-radius: 5px;
     width:300px;
     margin:10px 0;
+    font-size: 16pt;
+}
+input:focus{
+    box-shadow: 0px 5px 3px lightseagreen;
 }
 .header{
     width: 1000px;
@@ -18,8 +21,18 @@ input{
 }
 .main{
     max-width: 1000px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill , 200px);
-    grid-gap:25px;
+    margin:20px;
+    display: flex;
+    flex-basis: 1000px;
+    flex-wrap: wrap;
     text-align: center;
+}
+.item{
+    margin:10px;
+}
+/* Some unique styles*/
+img{
+    border:1px solid lightseagreen;
+    padding:5px;
+    box-sizing: border-box;
 }
