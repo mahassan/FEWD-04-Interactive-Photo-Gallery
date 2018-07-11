@@ -1,7 +1,8 @@
 $(document).ready(function(){
     //get reference for searchbox
-    let searchBox = $("#search");
-    let images = $('.main a img');
+    const searchBox = $("#search");
+    const images = $('.main a img');
+    const captions = $(images).parent().parent();
     
     // function picCollection(){
     //     for(let i = 0; i <images.length;i++){
@@ -15,17 +16,15 @@ $(document).ready(function(){
     keypress
     */
     searchBox.on('keydown', function(){
-        //loop over searchbox
+        //loop over images
             for(let i = 0; i <images.length;i++){
             //if searchbox value is equal/matching
-                if(images[i].alt.includes(searchBox.val())){
+                if(images[i].alt.includes(searchBox.val()) || captions[i].dataset.title.includes(searchBox.val())){
                     $(images[i]).show();
                 }else{
                     $(images[i]).hide();
                 }
             }
     })
-
-    //picCollection()
-    //console.log(picCollection());
+    console.log();
 })
