@@ -122,7 +122,7 @@ html.lb-disable-scrolling {
 }
 
 .lb-nav a.lb-next {
-  width: 64%;
+  width: 60%;
   right: 0;
   float: right;
   background: url(../images/next.png) right 48% no-repeat;
@@ -170,6 +170,7 @@ html.lb-disable-scrolling {
   font-size: 13px;
   font-weight: bold;
   line-height: 1em;
+  text-align: center;
 }
 
 .lb-data .lb-caption a {
