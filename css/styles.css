@@ -36,3 +36,7 @@ img{
     padding:5px;
     box-sizing: border-box;
 }
+.fancybox-caption{
+    text-align: center!important;
+    font-size:24px!important;
+}
