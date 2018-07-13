@@ -9,13 +9,14 @@ $(document).ready(function(){
     keydown
     */
     searchBox.on('keydown', function(){
+        let searchToLowerCase = searchBox.val().toLowerCase()
         //loop over images
             for(let i = 0; i <images.length;i++){
-                let lowerCase = searchBox.val().toLowerCase()
             //if searchbox value is equal/matching
+                var searchByCaptions = anchors[i].dataset.caption.toLowerCase()
                 if(
-                    images[i].alt.includes(lowerCase) || 
-                    anchors[i].dataset.caption.includes(lowerCase)
+                    images[i].alt.includes(searchToLowerCase) || 
+                    searchByCaptions.includes(searchToLowerCase)
                  ){
                         //then display that images
                         $(anchors[i]).show();
