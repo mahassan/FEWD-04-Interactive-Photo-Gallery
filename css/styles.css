@@ -14,8 +14,11 @@ input{
     width:300px;
     margin:10px;
     font-size: 16pt;
+    background:#f8f8f8;
 }
-
+input:focus{
+    background:none;
+}
 .main{
     margin:20px;
     display: flex;
