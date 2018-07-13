@@ -1,31 +1,26 @@
 #wrapper{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+.header{
+    display: flex;
     justify-content: center;
-    width:1000px;
-    margin:0 auto;
 }
 input{
-    padding:15px;
-    margin:0 auto;
+    padding:25px;
     border:1px solid grey;
     border-radius: 5px;
     width:300px;
-    margin:10px 0;
+    margin:10px;
     font-size: 16pt;
 }
-input:focus{
-    box-shadow: 0px 5px 3px lightseagreen;
-}
-.header{
-    width: 1000px;
-    text-align: center;
-}
+
 .main{
-    max-width: 1000px;
     margin:20px;
     display: flex;
-    flex-basis: 1000px;
     flex-wrap: wrap;
-    text-align: center;
+    justify-content: center;
 }
 .item{
     margin:10px;
@@ -39,4 +34,16 @@ img{
 .fancybox-caption{
     text-align: center!important;
     font-size:24px!important;
+}
+@media screen and (min-width:800px) and (max-width:3000px){
+    #wrapper{
+        width: 1000px;
+        margin:10px auto;
+    }
+    input:focus{
+        box-shadow: 0px 5px 3px lightseagreen;
+    }
+    input{
+        padding:15px;
+    }
 }
